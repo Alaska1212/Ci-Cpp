@@ -1,0 +1,5 @@
+Ball 150.50 2 5
+Doll 300.75 3 7
+Constructor 450.99 5 10
+Blocks 120.25 1 4
+Robot 499.99 6 12
