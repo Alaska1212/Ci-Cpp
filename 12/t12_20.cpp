@@ -19,16 +19,17 @@ int read(const char *filename, Point points[], int max_points) {
     int n = 0;
     char ch;
 
-    while (file >> ch) {
-        if (ch == '[') {
-            file >> points[n].x >> ch;
-            file >> points[n].y >> ch;
-            file >> points[n].m >> ch;
-            n++;
-            if (n >= max_points) {
-                break;
-            }
-        }
+    int n = 0;
+
+    while (n < max_points && file.peek() != EOF) {
+        file.ignore(256, '[');
+        file >> points[n].x;
+        file.ignore(256, ',');
+        file >> points[n].y;
+        file.ignore(256, ',');
+        file >> points[n].m;
+        file.ignore(256, ']');
+        n++;
     }
 
     file.close();
