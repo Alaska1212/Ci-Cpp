@@ -17,9 +17,6 @@ int read(const char *filename, Point points[], int max_points) {
     }
 
     int n = 0;
-    char ch;
-
-    int n = 0;
 
     while (n < max_points && file.peek() != EOF) {
         file.ignore(256, '[');
