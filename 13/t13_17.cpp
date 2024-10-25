@@ -4,20 +4,19 @@
 
 using namespace std;
 
-void transformSentence(string sentence) {
+void trans(string sentence) {
     string word;
-    string prev_word = "";  // To track the previous word
+    string prev_word = "";
     istringstream stream(sentence);
 
     while (stream >> word) {
-        // Check if the previous word was an article
         if (prev_word == "a" || prev_word == "an" || prev_word == "the") {
             if (!word.empty() && word[0] >= 'A' && word[0] <= 'Z') {
-                word[0] = word[0] + 32;  // Convert uppercase to lowercase by adding 32 (ASCII)
+                word[0] = word[0] + 32;
             }
         }
         cout << word << " ";
-        prev_word = word;  // Update previous word
+        prev_word = word;
     }
 
     cout << endl;
@@ -25,6 +24,6 @@ void transformSentence(string sentence) {
 
 int main() {
     string sentence = "The Apple is a Great Fruit and the Dog is an Animal";
-    transformSentence(sentence);
+    trans(sentence);
     return 0;
 }
