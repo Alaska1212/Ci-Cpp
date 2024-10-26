@@ -15,7 +15,7 @@ void filter(char letter, const string& inputf, const string& outputf) {
     ofstream output(outputf);
 
     if (!input.is_open() || !output.is_open()) {
-        cerr << "Ошибка при открытии файлов." << endl;
+        cerr << "Error opening the file." << endl;
         return;
     }
 
