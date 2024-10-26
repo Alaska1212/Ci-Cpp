@@ -1,0 +1,10 @@
+This is a sample text file.
+Each line will be centered within 50 characters.
+The program will add spaces to center the text.
+Empty lines will remain unchanged.
+
+This line has exactly fifty characters in length.
+Short
+Longer line that will not be changed because it's longer than fifty characters.
+Another centered line.
+And yet another one.
